@@ -1,0 +1,120 @@
+.post-container {
+  padding: 1rem;
+  margin-top: 5rem;
+  box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.post-container h3 {
+  font-weight: normal;
+  padding: 2rem 0;
+}
+
+.post-container__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-container__top {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.post-container__top p {
+  font-weight: bold;
+}
+
+.post-container__top span {
+  font-size: 1.3rem;
+}
+
+.post-container__top div {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.post-container__top div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* .post-container__photo {
+    height: 80rem;
+    width: 100%;
+  }
+  
+  .post-container__photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  } */
+
+.post__options {
+  position: relative;
+}
+
+.post__options span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.post__options span:hover {
+  background-color: rgb(232, 232, 232);
+}
+
+.post__options div {
+  position: absolute;
+  right: 2rem;
+  border: 1px solid rgb(176, 176, 176);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.post__options div button {
+  width: 10rem;
+  padding: 1rem;
+  background-color: rgb(232, 232, 232);
+  font-weight: bold;
+}
+
+.post__options div button:first-child {
+  border-bottom: 1px solid rgb(176, 176, 176);
+}
+
+.post__options div button:hover {
+  background-color: rgb(176, 176, 176);
+}
+
+.post-container__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.post-container__bottom div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.post-container__bottom div img {
+  max-width: 2.5rem;
+  cursor: pointer;
+}
+
+.post-container__bottom p {
+  border-bottom: 1px dotted rgb(199, 199, 199);
+  cursor: pointer;
+}

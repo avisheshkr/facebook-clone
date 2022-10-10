@@ -1,0 +1,67 @@
+.profile-right {
+  flex: 1.35;
+  padding: 5rem 5rem 5rem 0;
+}
+
+.btn_follow,
+.btn_unfollow {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-radius: 7px;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.profile-right__user-info {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.profile-right__user-info p:first-child {
+  font-weight: 500;
+  color: rgb(95, 95, 95);
+  font-size: 1.5rem;
+}
+
+.profile-right__user-info p:last-child {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.profile-right__friends {
+  padding-top: 5rem;
+}
+
+.profile-right__lists {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.profile-right__list {
+  width: 9rem;
+}
+
+.profile-right__list div {
+  height: 9rem;
+}
+
+.profile-right__list div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.profile-right__list p {
+  font-size: 1.5rem;
+}

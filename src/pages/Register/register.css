@@ -1,0 +1,72 @@
+.register-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f2f7;
+}
+
+.register__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90rem;
+  gap: 5rem;
+}
+
+.register__left {
+  flex: 1.2;
+}
+
+.register__left h1 {
+  color: var(--primary-color);
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.register__left h2 {
+  font-weight: 500;
+}
+
+.register__right {
+  flex: 1;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.register__right form div {
+  margin-bottom: 2rem;
+}
+
+.register__right form div input {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: 1.5px solid rgb(172, 172, 172);
+  border-radius: 10px;
+}
+
+.register__right form button {
+  background-color: var(--primary-color);
+  color: #fff;
+  width: 100%;
+  padding: 1.3rem 0;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.register__login {
+  background-color: #3da926;
+  color: #fff;
+  padding: 1.3rem 4rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}

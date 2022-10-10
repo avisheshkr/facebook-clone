@@ -1,0 +1,67 @@
+.rightbar {
+  flex: 1.2;
+  padding: 2rem 5rem 2rem 0;
+  /* height: calc(100vh - 6rem);
+  overflow-y: scroll;
+  position: sticky;
+  top: 6rem;
+  right: 0; */
+}
+
+.rightbar__gifts {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rightbar__gifts img {
+  max-width: 5rem;
+}
+
+.ad-image {
+  margin: 3rem 0;
+  border-radius: 20px;
+}
+
+.rightbar__online {
+  margin-top: -1rem;
+}
+
+.rightbar__online__single {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.rightbar__online__single__image {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.rightbar__online__single__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.rightbar__online__person {
+  position: relative;
+}
+
+.rightbar__online__person p {
+  font-weight: 500;
+}
+
+.rightbar__online__person div {
+  position: absolute;
+  left: -2.7rem;
+  top: -1.7rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: #30c533;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}

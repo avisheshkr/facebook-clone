@@ -1,0 +1,76 @@
+.messenger {
+  display: flex;
+  padding: 2rem;
+  height: calc(100vh - 6rem);
+}
+
+.conversation {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.conversation__search input {
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  font-size: inherit;
+}
+
+.conversation__chatheads {
+  padding: 2rem 0;
+}
+
+.message-container {
+  flex: 5.5;
+  padding: 1rem 2rem 1rem 8rem;
+  height: 100%;
+}
+
+.message {
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 80%;
+  overflow-y: scroll;
+}
+
+.message__input {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 1rem;
+  margin-top: 3rem;
+  height: 20%;
+}
+
+.message__input div {
+  flex: 1;
+}
+
+.message__input textarea {
+  width: 100%;
+  padding: 1rem;
+  font-family: inherit;
+  border: 1px solid rgb(199, 199, 199);
+  font-size: inherit;
+  border-radius: 5px;
+}
+
+.message__input button {
+  background-color: #028200;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: inherit;
+  border-radius: 5px;
+}
+
+.message-container h2 {
+  color: rgb(199, 199, 199);
+  font-size: 9rem;
+  font-weight: 400;
+  padding-top: 10rem;
+}

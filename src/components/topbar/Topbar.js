@@ -21,10 +21,10 @@ const Topbar = () => {
       </div>
       <ul className="menu">
         <li>
-          <a href="">homepage</a>
+          <a href="/">homepage</a>
         </li>
         <li>
-          <a href="">Timeline</a>
+          <a href="/">Timeline</a>
         </li>
       </ul>
       <ul className="alert-icons">

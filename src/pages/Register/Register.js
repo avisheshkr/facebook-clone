@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "./register.css";
@@ -23,7 +23,7 @@ const Register = () => {
         password: password.current.value,
       };
 
-      const res = await axios.post("/auth/register", user);
+      await axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, user);
 
       navigate("/login");
     } catch (error) {

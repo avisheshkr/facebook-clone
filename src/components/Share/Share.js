@@ -25,7 +25,7 @@ const Share = () => {
       if (!postData.desc && !postData.img)
         alert("Either enter desc or upload image, plz!!!");
       else {
-        await axios.post("/posts", postData);
+        await axios.post(`${process.env.REACT_APP_API_URL}/posts`, postData);
         window.location.reload(false);
       }
     } catch (error) {

@@ -22,7 +22,10 @@ const Messenger = () => {
       sender: user._id,
     };
     try {
-      const res = await axios.post(`/messages`, message);
+      const res = await axios.post(
+        `${process.env.REACT_APP_API_URL}/messages`,
+        message
+      );
       setMessages([...messages, res.data]);
       setNewMessage("");
     } catch (error) {
@@ -32,7 +35,9 @@ const Messenger = () => {
 
   useEffect(() => {
     const fetchConversations = async () => {
-      const res = await axios.get(`/conversations/${user._id}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/conversations/${user._id}`
+      );
       setConversations(res.data);
     };
     fetchConversations();
@@ -41,7 +46,9 @@ const Messenger = () => {
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const res = await axios.get(`/messages/${currentChat._id}`);
+        const res = await axios.get(
+          `${process.env.REACT_APP_API_URL}/messages/${currentChat._id}`
+        );
         setMessages(res.data);
       } catch (error) {
         console.log(error);

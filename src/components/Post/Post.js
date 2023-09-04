@@ -1,7 +1,7 @@
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useEffect, useState, useContext, useRef } from "react";
+import moment from "moment";
 import axios from "axios";
-import { format } from "timeago.js";
 import { Link } from "react-router-dom";
 import "./post.css";
 import { AuthContext } from "../../context/AuthContext";
@@ -19,9 +19,12 @@ const Post = ({ post }) => {
 
   const likePosts = async () => {
     try {
-      await axios.patch(`/posts/${post._id}/like`, {
-        userId: currentUser._id,
-      });
+      await axios.patch(
+        `${process.env.REACT_APP_API_URL}/posts/${post._id}/like`,
+        {
+          userId: currentUser._id,
+        }
+      );
 
       setIsLiked(!isLiked);
       setLikeCount(isLiked ? likeCount - 1 : likeCount + 1);
@@ -32,7 +35,7 @@ const Post = ({ post }) => {
 
   const removePosts = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/posts/${post._id}`, {
         data: { userId: currentUser._id },
       });
 
@@ -51,7 +54,9 @@ const Post = ({ post }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users?userId=${post.userId}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/users?userId=${post.userId}`
+      );
       setUser(res.data);
     };
     fetchUser();
@@ -91,7 +96,7 @@ const Post = ({ post }) => {
           <Link to={`/profile/${user.username}`}>
             <p>{user.username}</p>
           </Link>
-          <span>{format(post.createdAt)}</span>
+          <span>{moment(post.createdAt).fromNow()}</span>
         </div>
 
         <div className="post__options" ref={menuRef}>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./profile.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Feeds from "../../components/Feeds/Feeds";
@@ -12,7 +12,9 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users?username=${username}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/users?username=${username}`
+      );
       setUser(res.data);
     };
     fetchUser();

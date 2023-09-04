@@ -19,10 +19,16 @@ const ProfileRightbar = ({ user, username, id }) => {
 
     try {
       if (follow) {
-        await axios.patch(`/users/${id}/unfollow`, userData);
+        await axios.patch(
+          `${process.env.REACT_APP_API_URL}/users/${id}/unfollow`,
+          userData
+        );
         setFollow(false);
       } else {
-        await axios.patch(`/users/${id}/follow`, userData);
+        await axios.patch(
+          `${process.env.REACT_APP_API_URL}/users/${id}/follow`,
+          userData
+        );
         setFollow(true);
       }
     } catch (error) {
@@ -56,7 +62,9 @@ const ProfileRightbar = ({ user, username, id }) => {
 
   useEffect(() => {
     const fetchFriends = async () => {
-      const res = await axios.get(`/users/friends/${user._id}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/users/friends/${user._id}`
+      );
 
       setFriends(res.data);
     };

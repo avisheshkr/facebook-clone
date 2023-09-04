@@ -15,55 +15,55 @@ const Sidebar = () => {
     <div className="sidebar">
       <ul>
         <li>
-          <a href="">
+          <a href="/">
             <RssFeedIcon style={{ fontSize: "3rem" }} />
             <span>Feed</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <ChatIcon style={{ fontSize: "3rem" }} />
             <span>Chats</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <OndemandVideoIcon style={{ fontSize: "3rem" }} />
             <span>Videos</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <GroupIcon style={{ fontSize: "3rem" }} />
             <span>Groups</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <BookmarkIcon style={{ fontSize: "3rem" }} />
             <span>Bookmarks</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <HelpOutlineIcon style={{ fontSize: "3rem" }} />
             <span>Questions</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <WorkOutlineIcon style={{ fontSize: "3rem" }} />
             <span>Jobs</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <EventIcon style={{ fontSize: "3rem" }} />
             <span>Events</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <SchoolIcon style={{ fontSize: "3rem" }} />
             <span>Courses</span>
           </a>

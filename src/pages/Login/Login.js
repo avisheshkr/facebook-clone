@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const email = useRef();
   const password = useRef();
-  const { user, isFetching, error, dispatch } = useContext(AuthContext);
+  const { isFetching, dispatch } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -51,7 +51,7 @@ const Login = () => {
               )}
             </button>
           </form>
-          <a href="">forgot password?</a>
+          <a href="/">forgot password?</a>
           <Link to="/register">
             <button className="login__create">Create a New Account</button>
           </Link>

@@ -1,13 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { format } from "timeago.js";
+import moment from "moment";
 import "./message.css";
 
 const Message = ({ own, message, userId, time, scrollRef }) => {
   const [user, setUser] = useState({});
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users?userId=${userId}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/users?userId=${userId}`
+      );
       setUser(res.data);
     };
     fetchUser();
@@ -30,7 +32,7 @@ const Message = ({ own, message, userId, time, scrollRef }) => {
         <div className={own ? "message__user__desc" : "message__friend__desc"}>
           <p>{message}</p>
           <span className={own ? "message__user__timeago" : null}>
-            {format(time)}
+            {moment(time).fromNow()}
           </span>
         </div>
       </div>
